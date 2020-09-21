@@ -1,0 +1,19 @@
+TimeSpan span = DateTime.Now - item.added_at;
+        var x = "";
+        if (span.Days == 0 && span.Hours == 0 && span.Minutes == 0)
+        {
+            x = String.Format("{0} seconds", span.Seconds);
+        }
+        else if (span.Days == 0 && span.Hours == 0)
+        {
+            x = String.Format("{0} minutes", span.Minutes);
+        }
+
+        else if (span.Days == 0)
+        {
+            x = String.Format("{0} hours", span.Hours);
+        }
+        else
+        {
+            x = String.Format("{0} days", span.Days);
+        }
